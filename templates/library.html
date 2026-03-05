@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="library-container">
+
+<h1>📚 Library</h1>
+<p>Books uploaded in this session.</p>
+
+{% if books %}
+
+<div class="book-grid">
+
+    {% for book in books %}
+<div>
+    <p>{{ book }}</p>
+
+    <form action="{{ url_for('delete_book', filename=book) }}" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+</div>
+{% endfor %}
+
+</div>
+
+{% else %}
+    <div class="empty-library">
+        <p>No books uploaded yet.</p>
+        <p>Upload a PDF to start building your searchable library.</p>
+    </div>
+{% endif %}
+
+</div>
+
+{% endblock %}
