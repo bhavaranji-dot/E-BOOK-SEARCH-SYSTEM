@@ -80,19 +80,28 @@ Measures similarity between the user query vector and document vectors to rank t
 📂 Project Workflow
 Upload PDF
      ↓
+     
 Extract Text
      ↓
+     
 Detect Chapters & Sections
      ↓
+     
 Create TF-IDF Vectors
      ↓
+     
 Process User Query
      ↓
+     
 Calculate Cosine Similarity
      ↓
+     
 Rank Results
      ↓
+     
 Display Relevant Sections
+
+
 👩‍💻 Author
 
 RANJINI . J
