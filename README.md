@@ -1,321 +1,112 @@
-# 📚 E-Book Chapter and Section Search System
+📚 E-Book Chapter and Section Search System
+📌 Project Overview
 
----
+The E-Book Chapter and Section Search System is a Flask-based Information Retrieval application that allows users to upload PDF books and search for relevant content at the chapter and section level.
 
-## 📌 Project Description
+The system extracts text from uploaded PDFs and applies TF-IDF and Cosine Similarity to retrieve the most relevant sections for a user's query.
 
-The **E-Book Chapter and Section Search System** is a Flask-based Information Retrieval (IR) application that allows users to upload PDF books and perform intelligent search at the **chapter and section level**.
+Each user works within their own session, ensuring uploaded books are not shared between users.
 
-The system processes uploaded books, extracts textual content, and applies Information Retrieval techniques to find the most relevant sections for a given user query.
+🚀 Live Application
 
-Each user session is **isolated**, meaning users can search only within the books uploaded during their own session.
+🔗 Live Demo
+https://e-book-search-system-1.onrender.com/
 
-The system implements:
+🔗 GitHub Repository
+https://github.com/bhavaranji-dot/E-BOOK-SEARCH-SYSTEM.git
 
-• **Vector Space Model (VSM)**  
-• **TF-IDF Weighting**  
-• **Cosine Similarity Ranking**
+✨ Features
 
-to retrieve highly relevant sections from uploaded books.
+📤 Upload PDF Books
 
----
+📚 Automatic Chapter & Section Detection
 
-## 🎯 Objective of the Application
+🔍 Intelligent Search using TF-IDF
 
-The main objective of this system is to create an intelligent search platform that can:
+📊 Cosine Similarity Ranking
 
-• Upload and process PDF books  
-• Automatically detect chapters and sections  
-• Convert extracted text into TF-IDF vectors  
-• Compare user queries with book content  
-• Retrieve the most relevant sections  
-• Rank results based on similarity score  
-• Highlight query terms inside results  
-• Display corresponding page numbers  
+📄 Page Number Display
 
----
+🗂 Library View of Uploaded Books
 
-## 🛠 Tools and Technologies Used
+❌ No-Match Handling
 
-| Tool | Purpose |
-|-----|---------|
-| Python | Programming Language |
-| Flask | Web Application Framework |
-| PyPDF2 | PDF Text Extraction |
-| Scikit-learn | TF-IDF & Cosine Similarity |
-| HTML | Web Interface |
-| CSS | Styling |
-| JSON | Data Storage |
-| Git | Version Control |
-| GitHub | Project Repository |
-| Render | Cloud Deployment |
+🔐 Session-Based User Isolation
 
----
+🛠 Technologies Used
 
-# 🚀 Project Preview
+Python
 
-## 📤 Upload Document
+Flask
 
-![Upload](images/upload.png)
+PyPDF2
 
-![Upload Book](images/upload-book.png)
+Scikit-learn
 
-![Book Uploaded](images/book-uploaded.png)
+HTML
 
----
+CSS
 
-## 📚 Library View
+JSON
 
-![Library](images/library.png)
+Git & GitHub
 
----
+Render (Deployment)  
+)
 
-## 🔍 Search Query Result
 
-![Query Result](images/query-result.png)
-
----
-
-## 📖 Query Highlight Inside Book
-
-![Query in Book](images/query-in-book.png)
-
----
-
-## ❌ No Matches Found Case
-
-![No Matches](images/no-matches-found-case.png)
-
----
-
-## ⚙️ Automatic Chapter & Section Extraction
-
-![Extraction](images/chapter-section-extraction.png)
-
----
-
-## ✅ Book Indexed Successfully
-
-![Book Indexed](images/book-indexed.png)
-
----
-
-# 🗂 Project Structure
-
-![Project Structure](images/project-structure.png)
-
----
-
-# ⚙ Installation Steps
-
-### Step 1: Clone Repository
-
-```
-git clone https://github.com/pavithraB-wec/ebook-chapter-section-search-system.git
-```
-
----
-
-### Step 2: Navigate to Project Folder
-
-```
-cd ebook-chapter-section-search-system
-```
-
----
-
-### Step 3: Install Required Dependencies
-
-```
+⚙️ Installation
+Clone the Repository
+git clone https://github.com/bhavaranji-dot/E-BOOK-SEARCH-SYSTEM.git
+Navigate to the Folder
+cd E-BOOK-SEARCH-SYSTEM
+Install Dependencies
 pip install -r requirements.txt
-```
+▶ Run the Application
+py app.py
 
----
+Open your browser and go to:
 
-# ▶ How to Run the Application
-
-Run the Flask application:
-
-```
-py -3.12 app.py
-```
-
-You will see:
-
-```
-Running on http://127.0.0.1:5000/
-```
-
-Open your browser and visit:
-
-```
 http://127.0.0.1:5000
-```
+🧠 Algorithms Used
+TF-IDF (Term Frequency – Inverse Document Frequency)
 
----
+Used to determine the importance of words in documents.
 
-# 🚀 Key Project Features
+Cosine Similarity
 
-✅ Upload PDF Books  
+Measures similarity between the user query vector and document vectors to rank the most relevant sections.
 
-✅ Automatic Chapter Detection  
-
-✅ Section-Level Text Extraction  
-
-✅ TF-IDF Vector Creation  
-
-✅ Cosine Similarity Ranking  
-
-✅ Intelligent Search Results  
-
-✅ Query Highlighting  
-
-✅ Page Number Display  
-
-✅ Session-Based Book Isolation  
-
-✅ Library View for Uploaded Books  
-
-✅ Delete Uploaded Books  
-
-✅ Automatic Cleanup of Session Data  
-
----
-
-# 🔐 Session-Based Architecture
-
-This system uses **session-based isolation**, meaning:
-
-• Each user can only see books uploaded in their session  
-• Uploaded books are **not shared between users**  
-• When a user session ends, their uploaded books are automatically cleaned  
-
-Example:
-
-User A uploads:
-
-```
-Python.pdf
-```
-
-User B uploads:
-
-```
-DataScience.pdf
-```
-
-User A will **only see Python.pdf**, while User B will **only see DataScience.pdf**.
-
----
-
-# 🧠 Information Retrieval Algorithms Used
-
-The system implements fundamental IR algorithms including:
-
-### Vector Space Model (VSM)
-
-Documents and queries are represented as vectors in a multi-dimensional space.
-
----
-
-### TF-IDF (Term Frequency – Inverse Document Frequency)
-
-TF-IDF assigns importance to words based on how frequently they appear in a document relative to the entire dataset.
-
-Formula:
-
-```
-TF-IDF = TF × IDF
-```
-
----
-
-### Cosine Similarity
-
-Cosine similarity measures the similarity between the query vector and document vectors.
-
-Formula:
-
-```
-Cosine Similarity = (A · B) / (||A|| × ||B||)
-```
-
-The sections with the highest similarity scores are ranked as the most relevant results.
-
----
-
-# 🔍 System Workflow
-
-The system processes queries through the following pipeline:
-
-```
+📂 Project Workflow
 Upload PDF
      ↓
-Extract Text from Pages
+Extract Text
      ↓
 Detect Chapters & Sections
      ↓
-Store Structured Data
+Create TF-IDF Vectors
      ↓
-Generate TF-IDF Vectors
+Process User Query
      ↓
-User Query Processing
-     ↓
-Cosine Similarity Calculation
+Calculate Cosine Similarity
      ↓
 Rank Results
      ↓
 Display Relevant Sections
-```
+👩‍💻 Author
 
----
+RANJINI . J
 
-# 🌐 Live Application
+Team Members
 
-The project is deployed online using **Render**.
+Pavithra . B
 
-```
-https://ebook-chapter-section-search-system.onrender.com
-```
+Monika
 
-Users can upload books and search within their own session.
+Tanushri . V
 
----
+⭐ Conclusion
 
-# 👩‍💻 Author
+This project demonstrates how Information Retrieval techniques such as TF-IDF and Cosine Similarity can be applied in a Flask web application to perform efficient chapter-level search in E-Books.
 
-**Name:** Ranjini Sankar. J  
-
-**Teammate:**  Monika A
-
-             Pavithra b
-
-             Tanushri V
-              
-**Course:** B.Tech – Information Science and Engineering  
-
-**Year:** III Year  
-
-**College:** Women’s Engineering College  
-
-**Project Title:**  
-E-Book Chapter and Section Search System  
-(Flask-Based Information Retrieval System)
-
----
-
-# 📌 GitHub Repository
-
-```
-https://github.com/pavithraB-wec/ebook-chapter-section-search-system
-```
-
----
-
-# ⭐ Conclusion
-
-This project demonstrates a real-world implementation of **Information Retrieval techniques** using Flask, TF-IDF, and Cosine Similarity to perform efficient chapter and section-level search in E-Books.
-
-The system provides fast, structured, and ranked search results while maintaining **session-based isolation and automatic cleanup**, making it scalable for multiple users.
-
----
+The system provides fast, relevant, and structured search results with session-based isolation for multiple users.
